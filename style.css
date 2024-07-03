@@ -1,0 +1,357 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3; /* Grau */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den gesamten Inhalt horizontal */
+    width: 100%; /* Volle Breite */
+    content-visibility: auto; /* Verbessert das Rendern */
+}
+
+.topbar {
+    background-color: #333;
+    color: #FFD700; /* Gelb */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Volle Breite */
+}
+
+.logo-nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%; /* Volle Breite */
+    box-sizing: border-box;
+}
+
+.logo {
+    max-width: 50px;
+    margin-right: 20px;
+}
+
+.logo-nav h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #FFD700; /* Gelb */
+    color: #333;
+    border-radius: 5px;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    width: 100%; /* Volle Breite */
+    box-sizing: border-box;
+    background-attachment: fixed; /* Parallax Effekt */
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 8px;
+    animation: moveInLeft 1s ease-out; /* Kinetic Typography */
+}
+
+.hero-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.cta-button {
+    background-color: #FFD700;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    color: #FFD700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Volle Breite */
+    box-sizing: border-box;
+}
+
+.content {
+    width: 80%;
+    max-width: 1200px; /* Begrenzung der maximalen Breite */
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    container-type: inline-size; /* Container Queries */
+}
+
+@container (max-width: 1200px) {
+    .content {
+        padding: 10px;
+    }
+}
+
+section {
+    margin: 20px 0;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%; /* Volle Breite */
+    box-sizing: border-box;
+}
+
+.footer-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form label, .register-form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.login-form input, .register-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button, .register-form button {
+    background-color: #FFD700;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover, .register-form button:hover {
+    background-color: #333;
+    color: #FFD700;
+}
+
+.sidebar {
+    position: fixed;
+    right: 20px;
+    top: 150px; /* nach unten verschoben */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar a {
+    background-color: #FFD700;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+    color: #FFD700;
+}
+
+.sidebar i {
+    margin-right: 5px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Zentriert die Spalten */
+}
+
+.service {
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Swipe Card Animation */
+}
+
+.service:hover {
+    transform: translateX(10px) translateY(-10px);
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.reveal p {
+    text-align: center;
+}
+
+/* Kinetic Typography Animation */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Parallax Effect */
+.hero {
+    background-attachment: fixed;
+}
+
+/* Container Queries */
+.content {
+    container-type: inline-size;
+}
+
+@container (max-width: 1200px) {
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Click Button Animation */
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.button:active::after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+}
+
+/* 3D Transformations */
+.cube {
+    width: 100px;
+    height: 100px;
+    background: #3498db;
+    transform-style: preserve-3d;
+    transform: rotateY(45deg) rotateX(45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.cube:hover {
+    transform: rotateY(90deg) rotateX(90deg);
+}
+
+/* Pulsing Circles */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    width: 50px;
+    height: 50px;
+    background: #3498db;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
