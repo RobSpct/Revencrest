@@ -1,18 +1,13 @@
-/* Allgemeine Stile */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Hellgrau */
+    background-color: #d3d3d3; /* Grau */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    color: #333; /* Dunkelgrau */
-}
-
-header {
-    width: 100%;
+    align-items: center; /* Zentriert den gesamten Inhalt horizontal */
+    width: 100%; /* Volle Breite */
+    content-visibility: auto; /* Verbessert das Rendern */
 }
 
 .topbar {
@@ -20,6 +15,7 @@ header {
     color: #FFD700; /* Gelb */
     text-align: center;
     padding: 10px 0;
+    width: 100%; /* Volle Breite */
 }
 
 .logo-nav {
@@ -29,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    width: 100%;
+    width: 100%; /* Volle Breite */
     box-sizing: border-box;
 }
 
@@ -57,7 +53,6 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
@@ -66,21 +61,16 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Hero-Bereich */
 .hero {
-    background-image: url('images/data_Hightower.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     color: white;
     text-align: center;
     padding: 100px 20px;
     position: relative;
-    width: 100%;
+    width: 100%; /* Volle Breite */
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-attachment: fixed; /* Parallax Effekt */
 }
 
 .hero-text {
@@ -88,12 +78,23 @@ nav ul li a:hover {
     display: inline-block;
     padding: 20px;
     border-radius: 8px;
-    animation: moveInLeft 1s ease-out;
+    animation: moveInLeft 1s ease-out; /* Kinetic Typography */
 }
 
 .hero-logo {
     max-width: 150px;
     margin-bottom: 20px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .cta-button {
@@ -104,7 +105,6 @@ nav ul li a:hover {
     border-radius: 5px;
     margin-top: 10px;
     display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .cta-button:hover {
@@ -112,26 +112,25 @@ nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Container */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 100%;
+    width: 100%; /* Volle Breite */
     box-sizing: border-box;
 }
 
 .content {
     width: 80%;
-    max-width: 1200px;
+    max-width: 1200px; /* Begrenzung der maximalen Breite */
     background-color: white;
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    container-type: inline-size;
+    container-type: inline-size; /* Container Queries */
 }
 
 @container (max-width: 1200px) {
@@ -157,7 +156,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: relative;
-    width: 100%;
+    width: 100%; /* Volle Breite */
     box-sizing: border-box;
 }
 
@@ -180,7 +179,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Formularstile */
 .login-form, .register-form {
     display: flex;
     flex-direction: column;
@@ -207,7 +205,6 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .login-form button:hover, .register-form button:hover {
@@ -215,11 +212,10 @@ footer {
     color: #FFD700;
 }
 
-/* Sidebar */
 .sidebar {
     position: fixed;
     right: 20px;
-    top: 150px;
+    top: 150px; /* nach unten verschoben */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -232,7 +228,6 @@ footer {
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .sidebar a:hover {
@@ -244,13 +239,12 @@ footer {
     margin-right: 5px;
 }
 
-/* Dienstleistungen */
 .services {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: center; /* Zentriert die Spalten */
 }
 
 .service {
@@ -262,7 +256,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Swipe Card Animation */
 }
 
 .service:hover {
@@ -289,6 +283,22 @@ footer {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* Parallax Effect */
+.hero {
+    background-attachment: fixed;
+}
+
+/* Container Queries */
+.content {
+    container-type: inline-size;
+}
+
+@container (max-width: 1200px) {
+    .content {
+        padding: 10px;
     }
 }
 
