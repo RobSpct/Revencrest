@@ -43,6 +43,8 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center; /* Zentriert die Menüpunkte */
+    flex: 1;
 }
 
 nav ul li {
@@ -356,6 +358,7 @@ footer {
     animation: pulse 2s infinite;
 }
 
+/* Sticky Jira Widget */
 .jsd-embedded {
     position: fixed !important;
     bottom: 20px !important;
