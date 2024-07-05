@@ -36,7 +36,7 @@
         </div>
     </header>
 
-    <div class="hero" style="background-image: url('images/data_highway.jpg');">
+    <div class="hero" style="background-image: url('images/data_Hightower.jpg');">
         <div class="hero-text">
             <img src="images/Logo.jpeg" alt="Firmenlogo" class="hero-logo">
             <h2>Ihr Partner für IT-Lösungen</h2>
@@ -96,6 +96,23 @@
             origin: 'bottom',
             interval: 200
         });
+
+        // Sidebar visibility toggle based on scroll
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('.sidebar').fadeOut();
+            } else {
+                $('.sidebar').fadeIn();
+            }
+        });
+
+        // Jira Widget dynamic positioning
+        window.addEventListener('scroll', function() {
+            const jiraWidget = document.querySelector('.jsd-embedded');
+            jiraWidget.style.bottom = '20px';
+            jiraWidget.style.right = '20px';
+        });
     </script>
 </body>
 </html>
+
