@@ -43,8 +43,6 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Zentriert die Menüpunkte */
-    flex: 1;
 }
 
 nav ul li {
@@ -124,13 +122,6 @@ nav ul li a:hover {
 }
 
 .content {
-    width: 80%;
-    max-width: 1200px; /* Begrenzung der maximalen Breite */
-    background-color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-   .content {
     width: 80%;
     max-width: 1200px; /* Begrenzung der maximalen Breite */
     background-color: white;
@@ -228,8 +219,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    opacity: 1; /* Startet sichtbar */
-    transition: opacity 0.5s; /* Übergangseffekt für die Sichtbarkeit */
 }
 
 .sidebar a {
@@ -367,7 +356,6 @@ footer {
     animation: pulse 2s infinite;
 }
 
-/* Sticky Jira Widget */
 .jsd-embedded {
     position: fixed !important;
     bottom: 20px !important;
