@@ -105,7 +105,19 @@
                 $('.sidebar').fadeIn();
             }
         });
+
+        // Jira Widget position fix
+        const observer = new MutationObserver(() => {
+            const jiraWidget = document.querySelector('.jsd-embedded');
+            if (jiraWidget) {
+                jiraWidget.style.position = 'fixed';
+                jiraWidget.style.bottom = '20px';
+                jiraWidget.style.right = '20px';
+                jiraWidget.style.zIndex = '1000';
+            }
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
     </script>
 </body>
 </html>
-
