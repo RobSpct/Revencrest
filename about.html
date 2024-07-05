@@ -1,1 +1,57 @@
-<!DOCTYPE html> <html lang="de"> <head><meta name="description" content="Revencrest - Die beste Firma für ..."><meta name="keywords" content="Revencrest, Dienstleistungen, Firma"><meta name="author" content="Dein Name"> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Über Uns - Fiktive IT Firma</title> <link rel="stylesheet" href="style.css"> <script> // Überprüfen, ob der Benutzer authentifiziert ist if (!sessionStorage.getItem('authenticated')) { window.location.href = 'password.html'; } </script> </head> <body> <header> <div class="topbar"> <p>Kontakt: 01234 567890 | Email: info@fiktiveitfirma.de</p> </div> <div class="logo-nav"> <h1>Fiktive IT Firma</h1> <nav> <ul> <li><a href="index.html">Home</a></li> <li><a href="about.html">Über Uns</a></li> <li><a href="services.html">Unsere Dienstleistungen</a></li> <li><a href="contact.html">Kontakt</a></li> <li><a href="login.html">Login</a></li> </ul> </nav> </div> </header> <div class="content"> <section id="about" class="reveal"> <h2>Über Uns</h2> <p>Wir sind eine führende IT-Firma, spezialisiert auf Konzeption und CRM-Management. Unser Ziel ist es, unseren Kunden maßgeschneiderte IT-Lösungen zu bieten, die ihre Geschäftsprozesse optimieren und ihre Effizienz steigern.</p> <img src="images/it_technology.jpg" alt="IT Firma"> </section> </div> <div class="sidebar"> <a href="mailto:info@fiktiveitfirma.de">Email</a> <a href="tel:01234567890">Telefon</a> <a href="https://www.google.com/maps/place/Musterstraße+1,+12345+Musterstadt">Standort</a> </div> <footer> <p>&copy; 2024 Fiktive IT Firma. Alle Rechte vorbehalten.</p> <p>Adresse: Musterstraße 1, 12345 Musterstadt</p> </footer>  <script data-jsd-embedded data-key="c04716cd-1375-413c-87b2-1308fc650c2a" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script> </body> </html> 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Uns - Fiktive IT Firma</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Überprüfen, ob der Benutzer authentifiziert ist
+        if (!sessionStorage.getItem('authenticated')) {
+            window.location.href = 'password.html';
+        }
+    </script>    
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <p>Kontakt: 01234 567890 | Email: info@fiktiveitfirma.de</p>
+        </div>
+        <div class="logo-nav">
+            <h1>Fiktive IT Firma</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="services.html">Unsere Dienstleistungen</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <section id="about" class="reveal">
+            <h2>Über Uns</h2>
+            <p>Wir sind eine führende IT-Firma, spezialisiert auf Konzeption und CRM-Management. Unser Ziel ist es, unseren Kunden maßgeschneiderte IT-Lösungen zu bieten, die ihre Geschäftsprozesse optimieren und ihre Effizienz steigern.</p>
+            <img src="images/it_technology.jpg" alt="IT Firma">
+        </section>
+    </div>
+
+    <div class="sidebar">
+        <a href="mailto:info@fiktiveitfirma.de">Email</a>
+        <a href="tel:01234567890">Telefon</a>
+        <a href="https://www.google.com/maps/place/Musterstraße+1,+12345+Musterstadt">Standort</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fiktive IT Firma. Alle Rechte vorbehalten.</p>
+        <p>Adresse: Musterstraße 1, 12345 Musterstadt</p>
+    </footer>
+
+    <!-- Jira Widget -->
+    <script data-jsd-embedded data-key="c04716cd-1375-413c-87b2-1308fc650c2a" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script>
+</body>
+</html>
