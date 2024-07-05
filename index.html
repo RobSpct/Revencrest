@@ -97,21 +97,15 @@
             interval: 200
         });
 
-        // Sidebar visibility toggle based on scroll
+        // Sidebar visibility on scroll
         $(window).scroll(function() {
-            if ($(this).scrollTop() > 300) {
+            if ($(this).scrollTop() > 100) {
                 $('.sidebar').fadeOut();
             } else {
                 $('.sidebar').fadeIn();
             }
         });
-
-        // Jira Widget dynamic positioning
-        window.addEventListener('scroll', function() {
-            const jiraWidget = document.querySelector('.jsd-embedded');
-            jiraWidget.style.bottom = '20px';
-            jiraWidget.style.right = '20px';
-        });
     </script>
 </body>
 </html>
+
