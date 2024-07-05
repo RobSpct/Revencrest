@@ -362,3 +362,16 @@ footer {
     right: 20px !important;
     z-index: 1000 !important;
 }
+
+.hero {
+    background-image: url('images/data_Hightower.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    width: 100%; /* Volle Breite */
+    box-sizing: border-box;
+}
